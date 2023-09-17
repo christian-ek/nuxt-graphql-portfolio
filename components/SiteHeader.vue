@@ -1,21 +1,14 @@
 <script setup>
-import {
-  Disclosure,
-  DisclosureButton,
-  DisclosurePanel,
-  Menu,
-  MenuButton,
-  MenuItem,
-  MenuItems,
-} from "@headlessui/vue";
+import { Disclosure, DisclosureButton, DisclosurePanel } from "@headlessui/vue";
+import { Bars3Icon, XMarkIcon } from "@heroicons/vue/24/outline";
 
-import { Bars3Icon, BellIcon, XMarkIcon } from "@heroicons/vue/24/outline";
+const route = useRoute();
 
 const navigation = [
-  { name: "Dashboard", href: "#", current: true },
-  { name: "Team", href: "#", current: false },
-  { name: "Projects", href: "#", current: false },
-  { name: "Calendar", href: "#", current: false },
+  { name: "Home", href: "/", current: route.name === "index" },
+  { name: "Blog", href: "/blog", current: route.name.includes("blog") },
+  { name: "Projects", href: "/projects", current: route.name === "projects" },
+  { name: "Uses", href: "/uses", current: route.name === "uses" },
 ];
 </script>
 
