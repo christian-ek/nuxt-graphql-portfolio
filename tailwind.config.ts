@@ -1,7 +1,6 @@
 export default {
   plugins: [require("@tailwindcss/typography")],
-  theme: {
-    extend: {},
-  },
+  darkMode: "class",
+  theme: {},
   content: ["./pages/**/*.{html,js}", "./components/**/*.{html,js}"],
 };
